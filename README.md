@@ -2,6 +2,10 @@
 
 XaesarCraft is a powerful security tool that integrates XOR encryption and Caesar cipher capabilities, offering users a unique opportunity to manipulate and obscure payloads for PowerShell (PS1) and C# scripts generated through MSFVenom.
 
+## Disclaimer
+
+This tool is for educational purposes only. Unauthorized use of this tool against systems you do not own or have permission to test is illegal and unethical. The creator and contributors of XaesarCraft are not responsible for any misuse or damage caused by this program.
+
 ## Key Features:
 
 1. **XOR Encryption**: XaesarCraft enables users to employ XOR encryption to obfuscate payloads. This is particularly useful for bypassing signature-based antivirus systems.
