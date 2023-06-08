@@ -8,7 +8,7 @@ import argparse
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Process and format byte arrays')
     parser.add_argument('-n', '--number', type=parse_hex_number, default=None,
-                        help='The number to use for XOR or decreasing operation')
+                        help='The number to use for XOR or ROT13 operation')
     parser.add_argument('-m', '--mode', type=str, choices=['xor', 'rot'], default='xor',
                         help='Mode of operation: xor or rot')
     parser.add_argument('-i','--input', type=str, default=None,
