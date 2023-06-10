@@ -25,7 +25,7 @@ def decrease_bytes(bytes_list, number=13):
     result = []
     for i, byte in enumerate(bytes_list):
         value = int(byte, 16)
-        value = (value - number) % 255   
+        value = (value - number) % 256   
         hex_value = hex(value).replace('0x', '0x')
         result.append(hex_value if len(hex_value) > 3 else hex_value[:2] + hex_value[2:].zfill(2))
     return result
