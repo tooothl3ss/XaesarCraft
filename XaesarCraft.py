@@ -101,7 +101,7 @@ def format_output(input_string, processed_bytes, vba=False, b64=False):
     elif "Byte" in input_string:
         result = "[Byte[]] $buf = " + ','.join(processed_bytes)
     elif "byte" in input_string:
-        result = "byte[] buf = new byte[{}] {{{}}}".format(len(processed_bytes), ','.join(processed_bytes))
+        result = "byte[] buf = new byte[{}] {{{}}};".format(len(processed_bytes), ','.join(processed_bytes))
     else:
         return "Unknown format"
     if b64:
