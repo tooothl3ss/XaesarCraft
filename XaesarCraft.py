@@ -97,7 +97,8 @@ def format_output(input_string, processed_bytes, vba=False, b64=False):
     result = ""
     if vba:
         int_bytes = [str(int(byte, 16)) for byte in processed_bytes]
-        result = "buf = Array({})".format(','.join(int_bytes))
+        formatted_bytes = [', '.join(map(str, int_bytes[i:i+42])) for i in range(0, len(int_bytes), 42)]
+        result = "buf = Array({})".format(', _\n'.join(formatted_bytes))
     elif "Byte" in input_string:
         result = "[Byte[]] $buf = " + ','.join(processed_bytes)
     elif "byte" in input_string:
