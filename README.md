@@ -56,14 +56,6 @@ Dim rot As Integer: rot = 13
 For i = 0 To UBound(buf): buf(i) = buf(i) Xor xorValue: Next i
 For i = 0 To UBound(buf): buf(i) = (buf(i) + rot) Mod 256: Next i
 ```
-
-## Achievements 
-Usage of a default algo of XaesarCraft and the right place of decode gifts us some benefits in AV evasion ;)
-
-![image](https://github.com/to0thl3ss/XaesarCraft/assets/2934007/f2c2f7fa-b662-48e1-a893-71b2ce9df266)
-
-No additional technics for evasion AVs, just default injector(process hollowing) with "encoded" payload.
-
 ## Target Audience
 
 Designed for security researchers, penetration testers, and cybersecurity specialists, XaesarCraft offers comprehensive solutions for effectively creating and obscuring payloads, ensuring high levels of anonymity and protection.
